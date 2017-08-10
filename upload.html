@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Submit Manuscript-  International Journal of Engineering and Techniques</title>
+<link rel="icon" type="image/png" href="http://www.internationaljournalisar.org/images/myicon.jpg" />
+<link rel="stylesheet" href="http://www.internationaljournalisar.org/min/g=AuthorCss.css" />
+<script>
+window.onload = function() {
+var mainNode = document.getElementById("dynhgt");
+if(mainNode==null)
+{
+}
+else
+{
+mainNode.style.minHeight = (screen.height-349) + "px";
+}
+var dd=document.getElementById("seheight");
+if(dd==null)
+{
+}
+else
+{
+dd.style.minHeight = (screen.height-295) + "px";
+}
+var afcs23=document.getElementById("email");
+if(afcs23==null)
+{
+}
+else
+{
+document.getElementById("email").focus();
+}
+var afcs=document.getElementById("usrtxtbx");
+if(afcs==null)
+{
+}
+else
+{
+document.getElementById("usrtxtbx").focus();
+}
+}
+function CreateBookmarkLink()
+{
+alert("Press Ctrl + D to Bookmark this Page");
+}
+var IE6 = (navigator.userAgent.indexOf("MSIE 6")>=0) ? true : false;
+if (IE6) {
+alert("Sorry! This page doesn't support  Internet Explorer 6");
+}
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setDomainName', 'www.ijetjournal.org]);
+_gaq.push(['_trackPageview']);
+
+</script><link href="http://www.internationaljournalisar.org/css/uploadfile.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.internationaljournalisar.org/css/colorbox.css" />
+<link rel="stylesheet" href="http://www.internationaljournalisar.org/css/ieupload.css" />
+<link rel="stylesheet" href="http://www.internationaljournalisar.org/style.css" type="text/css" media="screen" />
+<script src="js/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<script type="text/javascript" src="http://www.internationaljournalisar.org/js/jquery.validate.min.js"></script>
+<meta name="title" content="Submit Paper (Manuscript)" ></meta>
+<meta name="description" content=" Submitting Manuscript/Paper is very easy process.  All manuscripts are subjected to RAPID peer review process and those of high quality (which are not previously published and are not under consideration for publication by another journal) would be published without delay" ></meta>
+<!--script src="js/jquery.uploadfile.min.js"></script>
+<script src="http://hayageek.github.io/jQuery-Upload-File/jquery.uploadfile.min.js"></script-->
+ <script src="http://www.internationaljournalisar.org/js/juf.js"></script>
+<script src="http://www.internationaljournalisar.org/brosercheck.js"></script>
+<script src="http://www.internationaljournalisar.org/js/jquery.colorbox-min.js"></script>
+<script>
+	$(document).ready(function(){
+	var typex="doc,docx";
+	var typefnl;
+	 var typef=[];
+	 typef=typex.split(',');
+	if ( $.browser.msie ) {
+ $( "#uploadie" ).replaceWith('<td style="padding-left:20px;"><div class="file_browse_wrapper"><input type="file" name="myfile" class="file_browse" /></div><input type="text" style="border:none;" readonly id="filename" /><input type="text"  style="display:none"  name="name_upload_valid"   id="id_upload_valid"/></td>');
+$( "#mulitplefileuploader" ).hide();
+$( "#f1" ).remove();
+$( ".demo").hide();
+
+var sp=1;
+$('.file_browse').change(function() {
+$('input[type="submit"]').removeAttr('disabled');
+var filename = $(this).val();
+ var ext = $('.file_browse').val().split('.').pop().toLowerCase();
+if($.inArray(ext,typef) == -1) {
+
+ alert('File type is not allowed. Allowed only:'+typef);
+}
+else
+{
+    var lastIndex = filename.lastIndexOf("\\");
+    if (lastIndex >= 0) {
+     filename = filename.substring(lastIndex + 1);
+    }
+    $('#filename').val(filename);
+ $('#id_upload_valid').val("somthing");
+
+	}
+});
+}
+ $(".search").keyup(function()
+{
+var searchid = $(this).val();
+var dataString = 'search='+ searchid;
+if(searchid!='')
+{
+	$.ajax({
+	type: "POST",
+	url: "getstate.php",
+	data: dataString,
+	cache: false,
+	success: function(html)
+	{
+	$("#result").html(html).show();
+	}
+	});
+}return false;
+});
+$("#result").on("click",function(e){
+	var clicked = $(e.target);
+	var name = clicked.find('.name').html();
+	var decoded = $("<div/>").html(name).text();
+	$('#searchid').val(decoded);
+});
+$(document).on("click",".name",function(e){
+	var name = $(this).html();
+	var decoded = $("<div/>").html(name).text();
+	$('#searchid').val(decoded);
+});
+$(document).on("click", function(e) {
+	var clicked = $(e.target);
+	if (! clicked.hasClass("search")){
+	$("#result").fadeOut();
+	}
+});
+$('#searchid').click(function(){
+	$("#result").fadeIn();
+});
+});
+</script>
+<script type="text/javascript">
+
+(function($,W,D)
+{
+    var JQUERY4U = {};
+
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+            //form validation rules
+            $("#sf").validate({
+					ignore: "",
+					onkeyup: function(element) { //turn off onkeyup validation for ajax checking fields
+		var element_id = jQuery(element).attr('name');
+	//	console.log(this.settings.rules);
+		if (this.settings.rules[element_id]!=undefined && this.settings.rules[element_id].onkeyup !== false) {
+			jQuery.validator.defaults.onkeyup.apply(this, arguments);
+		}
+	},
+                rules: {
+                    eid: {
+                        required: true,
+                        email: true,
+						 remote: {
+									url: "check1.php",
+									type: "post",
+									data: {
+									username:"2017-08-03 15:21:06"
+									}
+								}
+                    },
+                    pwd1: {
+                        required: true,
+                        minlength: 6,
+						maxlength:12
+                    },
+					pwd2: {
+                        required: true,
+						equalTo: "#pass"
+                    },
+					phone:
+					{
+					required: true,
+                    maxlength: 20,
+					minlength: 6,
+					number: true
+					 },
+					  branch:
+					  {
+					required: true
+					  },
+					 area: "required",
+					 university: "required",
+					 m_type:"required",
+					  publication:
+					  {
+					required: true
+					  },
+                    title: "required",
+					state: "required",
+					city: "required",
+					country: "required",
+					Author1: "required",
+					name_upload_valid: "required",
+					cb1:
+					{
+					required: true
+					}
+                },
+                messages: {
+
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    eid: { email: "Please enter a valid email address",
+					   remote:"You are Already Registerd with this Email !"
+
+					},
+					 vemail: "Email already exist!",
+                    cb1: "Please accept our policy",
+					name_upload_valid:"Please Upload Paper"
+                },
+
+
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+    $(D).ready(function($) {
+
+
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+</script>
+
+<style>
+.error
+{
+
+float:left;
+}
+.inputcontent
+{
+
+width:100%;
+}
+ td:nth-child(2) {
+    padding-left: 20px;
+}?
+</style>
+<style type="text/css">
+	#result
+	{
+		position:absolute;
+		width:289px;
+		padding:2px 10px 0px 0px;
+		display:none;
+		margin-top:29px;
+		border-top:0px;
+		overflow:hidden;
+		border:1px #CCC solid;
+		background-color: white;
+	}
+	.show
+	{
+		padding:10px 10px 10px 0px;
+		width:100%;
+		border-bottom:1px #999 dashed;
+		font-size:13px;
+		height:7px;
+	}
+	.show:hover
+	{
+		background:#e0e0e0;
+		color:#000000;
+		cursor:pointer;
+	}
+
+</style>
+<script>
+
+			$(document).ready(function()
+			{
+				$(".inline").colorbox({inline:true, width:"50%"});
+//$("body").off();
+
+
+				});
+				</script>
+				<script>
+function passwordStrength(pwd1)
+{
+	var desc = new Array();
+	desc[0] = "Very Weak";
+	desc[1] = "Weak";
+	desc[2] = "Better";
+	desc[3] = "Medium";
+	desc[4] = "Strong";
+	desc[5] = "Strongest";
+
+	var score   = 0;
+
+	//if password bigger than 6 give 1 point
+	if (pwd1.length > 6) score++;
+
+	//if password has both lower and uppercase characters give 1 point
+	if ( ( pwd1.match(/[a-z]/) ) && ( pwd1.match(/[A-Z]/) ) ) score++;
+
+	//if password has at least one number give 1 point
+	if (pwd1.match(/\d+/)) score++;
+
+	//if password has at least one special caracther give 1 point
+	if ( pwd1.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/) )	score++;
+
+	//if password bigger than 12 give another 1 point
+	if (pwd1.length > 9) score++;
+
+	 document.getElementById("passwordDescription").innerHTML = desc[score];
+	 document.getElementById("passwordStrength").className = "strength" + score;
+}
+</script>
+
+</head>
+<body>
+ <div class="container_12">
+        <div class="clear">
+        </div>
+		<script src="http://www.internationaljournalisar.org/js/stopclick.js"></script>
+<head>
+<noscript><meta http-equiv="refresh" content="0;url=JSNE.php"></noscript>
+
+</head><br>
+
+      <div >
+
+      <ul id="css3menu1" class="topmenu">
+    <li class="topfirst"><a href="http://www.internationaljournalisar.org" style="width:125px;height:8px;line-height:9px; text-align:center;">Home</a></li>
+    <li class="topmenu"><a href="http://www.internationaljournalisar.org/Submit-Paper.html" style="width:125px;height:8px;line-height:9px; text-align:center;">Submit Paper</a></li>
+    <li class="topmenu"><a href="http://www.internationaljournalisar.org/callforpaper.html" style="width:125px;height:8px;line-height:9px; text-align:center;">Call For Paper</a> </li>
+    <li class="topmenu"><a href="http://www.internationaljournalisar.org/Publication-Fee.html" style="width:125px;height:8px;line-height:9px; text-align:center;">Publication Charges</a></li>
+    <li class="topmenu"><a href="http://www.internationaljournalisar.org/instructions.html" style="width:125px;height:8px;line-height:9px; text-align:center;"> Author Instructions</a></li>
+    <li class="toplast"><a href="http://www.internationaljournalisar.org/Journals.html"style="width:125px;height:8px;line-height:9px; text-align:center;">ISAR Journals</a></li>
+    <li class="topmenu"><a href="http://www.internationaljournalisar.org/publication-guidelines.html" style="width:145px;height:8px;line-height:9px; text-align:center;">Publication Guidelines</a></li>
+    <li><a href="http://www.internationaljournalisar.org/faq.html" style="width:85px;height:8px;line-height:9px; text-align:center;">FAQ</a> </li>
+    <li class="toplast"><a href="http://www.internationaljournalisar.org/Contact.html" style="width:135px;height:8px;line-height:9px; text-align:center;">Contact Us</a></li>
+      </ul>
+    </div>
+
+<div class="grid_10" id="seheight">
+   <div class="block">
+  <center>
+	<form action="sendfile.php" method="post" enctype="multipart/form-data" style="width:45%" class="form2"   name="myForm" id="sf">
+	<center>
+<div >
+	<div class="formtitle">
+	<font face="Georgia",font size="3" ,font color="">ISAR Journals - Submit Manuscript / Paper</font>
+	</div>
+	   <table width="500" bgcolor="" border="0">
+
+                    <tbody>
+                    <tbody>
+
+<tr class="style13" valign="top"><td height="80" td width="30" align="left" left align: px;><br><br>
+<div class="wrap">
+<div class="wrap">
+
+    <form method="POST" name="sendemail" action="sendfile.php" enctype="multipart/form-data">
+<div>
+<label for='name'><font face="Georgia"><b>Name : <b></font></label><br/>
+<input type="text" name="name" ><br/>
+</div><br><br>
+
+
+<div>
+<label for='email'><font face="Georgia">Email : <span style="color:red">*</span> </font></label><br/>
+<input type="text" name="email" ><br/>
+</div><br><br>
+
+
+
+<div>
+<label for='number'><b><font face="Georgia",font color=red>Mobile No :</b> </font></label><br/>
+<input type="text" name="number" ><br>(Without Country Code)<span style="color:red">*</span><br/>
+</div><br><br>
+
+
+<div>
+<label for='title'><b><font face="Georgia",font color=#151313>Paper Title :</b><span style="color:red">*</span> </font> </label><br/>
+<input type="text" name="title" ><br/><br>
+</div><br><br>
+
+
+<div>
+<label for='title'><b><font face="Georgia",font color=#151313>Journal Name :</b><span style="color:red">*</span> </font> </label><br/>
+<input type="text" name="journals" ><br/><br>
+</div><br><br>
+
+
+ <div>
+ <label for='author'><b><font face="Georgia",font color=#151313>Name of Author's  :</b> </font></label><br/>
+ <input type="text" name="author" ><br/>
+ </div><br><br>
+
+
+ <div>
+ <label for='address'><b><font face="Georgia",font color=#00508a>Postal Address : </b> </font> </label><br/>
+ <input type="text" name="address" ><br/>
+</div><br>
+
+
+<div>
+<br><label for='uploaded_file'><font face="Georgia";font color=#F308BE>Select A File To Upload :</font></label><br><br>
+<input type="file" name="uploaded_file"></br></br> (Allowed file types: <span style="color:red">pdf , docx</span>).
+</div><br>
+<input type="submit" value="Submit" name='submit'><br/><br/><br/><br/>
+</form>
+</div>
+</td>
+
+  </table>
+
+	</div></center></form>
+		</center>
+
+		</div>
+	</div>
+	</div>
+
+	 <div class="clear" >
+<div style="font-family:arial;font-size:14px;text-align:center;color:white;" > <h3> For any query, send an email at, ISARJournals@gmail.com </h3></div>
+</div>
+    <div id="site_info">
+        <p style="text-align:center">
+            Copyright <a href="http://www.internationaljournalisar.org">International Scientific and Research ( ISAR )</a>. All Rights Reserved.
+        </p>
+
+    </div></body>
+</html>
