@@ -60,19 +60,20 @@ function myFunction() {
 
     var dateClass=document.getElementsByClassName("dateDemo");
     for(var j = 0, length1 = dateClass.length; j < length1; j++) {
-    	dateClass[j].innerHTML = lastDay.getDate() + " th " + month[d.getMonth()]+" "+year;
-    	//alert(lastDay.getDate() + " th " + month[d.getMonth()]+" "+year)
+    	dateClass[j].innerHTML = lastDay.getDate() + " - " + month[d.getMonth()]+" "+year;
+    	//alert(lastDay.getDate() + " - " + month[d.getMonth()]+" "+year)
      }
 
 
 
-    /* document.getElementsByClassName("monthDemo").innerHTML = month[d.getMonth()]+" "+year; */
+    /* document.getElementsByClassName("monthDemo").innerHTML = "Call for paper "+ month[d.getMonth()]+" "+year; */
 }
 
 window.onload = function() {
   myFunction();
 };
 </script>
+
 
 
 
@@ -118,9 +119,7 @@ try {
 
 <div class="logocontent" style="left: 395px; top: 90px; position: absolute; font-size: 15px; color: #000000; text-align: center;"><p style="left: 20px"; style="font-size:12px;font-size:3px; color:#18b3e4; margin:8px;">Scholary Peer Reviewed Research Publishing Journals</p></div>
 
-<div class="logocontent" style="left: 700px; top:110px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><img src="http://www.internationaljournalisar.org/images/openaces.jpg" alt="ISAR" width="100" height="70" /><br></div>
-
-<div class="logocontent" style="left: 925px; top:100px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><a href="http://www.internationaljournalisar.org/Submit-Paper.html" title="Submit-Paper"><img src="http://www.internationaljournalisar.org/images/callpaper.jpg" alt="ISAR" width="180" height="70" /></a><br></div></div>
+<div class="logocontent" style="left: 825px; top:90px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><img src="http://www.internationaljournalisar.org/images/openaces.jpg" alt="ISAR" width="100" height="70" /><br></div></div>
 
 </header>
 
@@ -134,6 +133,7 @@ try {
   ga('send', 'pageview');
 
 </script>
+
 <div class="clear"></div>
 	<div class="zerogrid">
 		<div>
@@ -165,6 +165,8 @@ try {
 
 		<li><a href="http://www.internationaljournalisar.org/publish_paper.html" style="width: 100px; height: 8px; line-height: 9px; text-align: left;">Submission</a></li>
 
+		<li><a href="http://www.internationaljournalisar.org/Conference.html" style="width: 100px; height: 8px; line-height: 9px; text-align: left;">Conference</a></li>
+
 		<li><a href="http://www.internationaljournalisar.org/instructions.html" style="width: 100px; height: 8px; line-height: 9px; text-align: left;">Author Instructions</a></li>
 
               <li><a href="http://www.internationaljournalisar.org/publication-guidelines.html" style="width: 120px; height: 7px; line-height: 7px; text-align: left;">Publication Guidelines</a></li>
@@ -179,14 +181,25 @@ try {
 
 	</div>
 	<div class="clear"></div>
-  <div class="wrap-content zerogrid">
 
+<section id="content">
+  <div class="wrap-content zerogrid">
 
 	      <div class="clear"></div>
 	  <div id="sidebar" class="right col-1-4">
-  <div class="wrap-col">
+  <div class="wrap-col"><br>
 
-<br>
+<div class="box">
+<div class="heading"><h2>Call for Papers</h2></div>
+<div class="content" style="">
+<div class="info" style="font-size:14px;text-align:center;">Submission Last Date :  <p style="font-weight:bold; color:#E34A1D; margin-top:-5px; margin-bottom:-5px;"><span class="dateDemo"></span></p></div><br>
+
+<div class="info" style="font-size:14px;text-align:center;">Publication Date :  <p style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">After payment, within 2 days</p></div><br>
+
+<div class="info submit_paper_bun" style="font-size:14px;"><a href="#">Submit Your Paper</a></div>
+<div class="info submit_paper_bun" style="font-size:14px; margin-top:20px;"><a href="#" target="_blank">Apply Join as reviewer</a></div>
+</div></div>
+
 
 <div class="box">
       <div class="heading">
@@ -201,32 +214,29 @@ try {
 <li><a href="http://www.internationaljournalisar.org/IJECE/index.html" title="ISAR - IJECE">ISAR International Journal of Electronics and Communication Ethics</a></li>
 <li><a href="http://www.internationaljournalisar.org/IJEEE/index.html" title="ISAR - IJEEE">ISAR International Journal of Electrical and Electronic Ethics</a></li>
 <li><a href="http://www.internationaljournalisar.org/IJAP/index.html" title="ISAR - IJAP<">ISAR International Journal of Advances in Physics</a></li>
-<li><a href="http://www.internationaljournalisar.org/IJAC/index.html" title="ISAR - IJAC">ISAR International Journal of Advances in chemistry</a></li><br>
-<center><strong><a href="http://www.internationaljournalisar.org" title="More Journals"><font face ="arial" color="red">View More...</a></font></strong></center>
-      </div>
+<li><a href="http://www.internationaljournalisar.org/IJAC/index.html" title="ISAR - IJAC">ISAR International Journal of Advances in chemistry</a></li>
+ <br><center><strong><a href="http://www.internationaljournalisar.org" title="More Journals"><font face ="arial" color="red">View More...</a></font></strong></center>
+ </div>
     </div>
 
 
+<div class="box">
+<div class="heading"><h2>Conference</h2></div>
+<div class="content" style="">
+<div class="info" style="font-size:14px;text-align:center;color:#E34A1D;font-weight:bold;">Internatinal Conference on Emerging Trends in Applications of Computing ( ICETAC 2K17 )</div><br>
+<div class="info submit_paper_bun" style="font-size:14px;"><a href="http://www.internationaljournalisar.org/Conference.html">Click Here</a></div>
+</div></div>
 
-		<div class="box">
-      <div class="heading">
-        <h2>Online Visiters</h2>
-      </div>
-		 <br><center><script type="text/javascript" src="http://widget.supercounters.com/flag.js"></script><script type="text/javascript">sc_flag(1160510,"FFFFFF","000000","cccccc",2,10,0,0)</script><br><noscript><a href="http://www.supercounters.com/">Flag Counter</a></noscript><br>
-
-
-			  </center>
-
-    </div>
   </div>
 </div>
       <!--=========================================contact query=====================================-->
       <div id="main-content" class="col-3-6">
         <div class="wrap-col">
 
-    <center><a href="http://www.internationaljournalisar.org/callforpaper.html"><font face="arial" font color="#1784D9" font size="3"><strong>Call for Paper </strong></font><font face="arial" font color="#FF0000" font size="3"><strong><span class="monthDemo"></span><img src="http://www.internationaljournalisar.org/images/new.gif" align="#" style="margin:0px"></strong></font></a></center>
+<center><a href="http://www.internationaljournalisar.org/callforpaper.html"><font face="arial" font color="#1784D9" font size="3"><strong>Call for Paper </strong></font><font face="arial" font color="#FF0000" font size="3"><strong><span class="monthDemo"></span><img src="http://www.internationaljournalisar.org/images/new.gif" align="#" style="margin:0px"></strong></font></a></center>
 
-	          <article>
+
+         <article>
             <div class="heading"><br>
               <h2>ISAR -About</h2>
             </div>
@@ -271,6 +281,7 @@ try {
 		</div>
 	</a>
 </div>
+
 
   <div class="copyright">
     <p>Copyright &copy;2016 <a href="http://www.internationaljournalisar.org" target="blank"><font size="1"> ISAR - International Scientific And Research Group</font></a>, All rights reserved </font></p>

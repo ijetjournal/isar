@@ -60,8 +60,8 @@ function myFunction() {
 
     var dateClass=document.getElementsByClassName("dateDemo");
     for(var j = 0, length1 = dateClass.length; j < length1; j++) {
-    	dateClass[j].innerHTML = lastDay.getDate() + " th " + month[d.getMonth()]+" "+year;
-    	//alert(lastDay.getDate() + " th " + month[d.getMonth()]+" "+year)
+    	dateClass[j].innerHTML = lastDay.getDate() + " - " + month[d.getMonth()]+" "+year;
+    	//alert(lastDay.getDate() + " - " + month[d.getMonth()]+" "+year)
      }
 
 
@@ -118,9 +118,7 @@ try {
 
 <div class="logocontent" style="left: 395px; top: 90px; position: absolute; font-size: 15px; color: #000000; text-align: center;"><p style="left: 20px"; style="font-size:12px;font-size:3px; color:#18b3e4; margin:8px;">Scholary Peer Reviewed Research Publishing Journals</p></div>
 
-<div class="logocontent" style="left: 700px; top:110px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><img src="http://www.internationaljournalisar.org/images/openaces.jpg" alt="ISAR" width="100" height="70" /><br></div>
-
-<div class="logocontent" style="left: 925px; top:100px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><a href="http://www.internationaljournalisar.org/Submit-Paper.html" title="Submit-Paper"><img src="http://www.internationaljournalisar.org/images/callpaper.jpg" alt="ISAR" width="180" height="70" /></a><br></div></div>
+<div class="logocontent" style="left: 825px; top:90px; position: absolute; font-size: 18px; color: #000000; text-align: center;"><img src="http://www.internationaljournalisar.org/images/openaces.jpg" alt="ISAR" width="100" height="70" /><br></div></div>
 
 </header>
 
@@ -186,15 +184,25 @@ try {
 
 	      <div class="clear"></div>
 	  <div id="sidebar" class="right col-1-4">
-  <div class="wrap-col">
+  <div class="wrap-col"><br>
+
+<div class="box">
+<div class="heading"><h2>Call for Papers</h2></div>
+<div class="content" style="">
+<div class="info" style="font-size:14px;text-align:center;">Submission Last Date :  <p style="font-weight:bold; color:#E34A1D; margin-top:-5px; margin-bottom:-5px;"><span class="dateDemo"></span></p></div><br>
+
+<div class="info" style="font-size:14px;text-align:center;">Publication Date :  <p style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">After payment, within 2 days</p></div><br>
+
+<div class="info submit_paper_bun" style="font-size:14px;"><a href="#">Submit Your Paper</a></div>
+<div class="info submit_paper_bun" style="font-size:14px; margin-top:20px;"><a href="#" target="_blank">Apply Join as reviewer</a></div>
+</div></div>
 
 
-
-<br><div class="box">
-      <div class="heading">
-        <h2>ISAR - Journals</h2>
-      </div>
-      <div class="content" style="">
+<div class="box">
+<div class="heading">
+<h2>ISAR - Journals</h2>
+</div>
+<div class="content" style="">
 <ul>
 <li><a href="http://www.ijretjournal.org/" target="blank" title="ISAR - IJRET">ISAR - International Journal of Research in Engineering Technology</a></li>
 <li><a href="http://www.ijcsejournal.org/" target="blank"  title="ISAR - IJCSE">ISAR - International Journal of Computer science engineering Techniques</a></li>
@@ -208,10 +216,11 @@ try {
       </div>
     </div>
 
-
-
-
-
+<div class="box">
+<div class="heading"><h2>Conference</h2></div>
+<div class="content" style="">
+<div class="info" style="font-size:14px;text-align:center;color:#E34A1D;font-weight:bold;">Internatinal Conference on Emerging Trends in Applications of Computing ( ICETAC 2K17 )</div><br>
+<div class="info submit_paper_bun" style="font-size:14px;"><a href="http://www.ijcsejournal.org/ICETAC-2K17-Part3.html">Click Here</a></div></div></div>
 
   </div>
 </div>
@@ -268,7 +277,7 @@ $(window).load(function() {
 <p>You have to submit your paper through online submission link submit your paper.</p><br/>
 
 <p><strong>2 .</strong>How much it takes for review process?</p><br>
-<p>The International Journal of Engineering & Science takes 3 - 5 days for publication of paper.</p><br/>
+<p>The International Scientific and Research takes 3 - 5 days for publication of paper.</p><br/>
 
 <p><strong>3 .</strong>When I have to deposit fees?</p><br>
 <p>You have to deposit fees only after getting acceptance letter.</p><br/>
