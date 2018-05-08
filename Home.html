@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +29,9 @@ Journal, Management Journal, Engineering Journal, International Journal, enginee
 	href="http://www.internationaljournalisar.org/css/style.css">
 <link rel="stylesheet"
 	href="http://www.internationaljournalisar.org/css/responsive.css">
+
+<link rel="stylesheet" type="text/css" href="http://www.internationaljournalisar.org/css/global.css"/>
+
 <link rel="stylesheet"
 	href="http://www.internationaljournalisar.org/css/sitePopUp.css">
 <link rel="stylesheet"
@@ -382,6 +383,27 @@ a {
 							});
 						});
 	</script>
+
+<script type="text/javascript">
+       function tick(){
+		$('#ticker_01 li:first').slideUp( function () { $(this).appendTo($('#ticker_01')).slideDown(); });
+	}
+	setInterval(function(){ tick () }, 2500);
+	function tick2(){
+		$('#ticker_02 li:first').slideUp( function () { $(this).appendTo($('#ticker_02')).slideDown(); });
+	}
+	setInterval(function(){ tick2 () }, 3000);
+	function tick3(){
+		$('#ticker_03 li:first').animate({'opacity':0}, 300, function () { $(this).appendTo($('#ticker_03')).css('opacity', 1); });
+	}
+	setInterval(function(){ tick3 () }, 4000);
+	function tick4(){
+		$('#ticker_04 li:first').animate({'opacity':0}, 300, function () { $(this).appendTo($('#ticker_04')).css('opacity', 1); });
+	}
+	setInterval(function(){ tick4 () }, 5000);
+    </script>
+
+
 <div class="social">
   <a href="https://www.facebook.com/ISAR-Journals-737205039741272/?ref=bookmarks" class="link facebook" target="blank"><span class="fa fa-facebook-square"></span></a>
   <a href="https://www.linkedin.com/in/international-scientific-and-research-2551bb143/" class="link google-plus" target="blank"><span class="fa fa-linkedin-square">
@@ -491,13 +513,85 @@ a {
     </div>
 
 
-
 <div class="box">
 <div class="heading"><h2>Conference</h2></div>
 <div class="content" style="">
 <div class="info" style="font-size:14px;text-align:center;color:#E34A1D;font-weight:bold;">Internatinal Conference on Emerging Trends in Applications of Computing ( ICETAC 2K17 )</div><br>
 <div class="info submit_paper_bun" style="font-size:14px;"><a href="http://www.internationaljournalisar.org/Conference.html">Click Here</a></div>
 </div></div>
+
+
+<div class="box">
+<div class="heading"><h2>Editorial Board</h2></div>
+<div class="content">
+<ul id="ticker_01" class="ticker" style="line-height:12px; text-align:center; margin-left:0px;">
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">Dr. Khaled Alawasa</p>
+<div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/01.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">Prof. Galal Ali Hassaan</p><div class="clear"></div>
+<center>
+<img src="http://www.ijeeejournal.org/Board_members/02.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Electrical Engineering and Ethics</span></div></li>
+
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">Gourav Sachdeva</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/03.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">R. Vigithra</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/04.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">R.Ramesh</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/05.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">Prof. Dr. Eyhab El-Kharashi</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/06.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">R.Kavin</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/07.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+<li  class="height175">
+<p style="margin-bottom:10px;font-weight:bold; color:#E34A1D;">N.Naveen</p><div class="clear"></div>
+<center>
+<img src="http://www.internationaljournalisar.org/Board_members/08.png" alt="ISAR Journals" style="max-width:170px; max-height:90px; border:none; margin-bottom:10px;"/></a></center><div class="clear"></div>
+<a href="#">Journal</a><div class="clear"></div>
+<div class="info" style="font-size:13px;text-align:center; margin-top:5px;"> <span style=" font-weight:bold; color:#E34A1D; margin-top:-8px;">International Journal of Research in Engineering Technology</span></div></li>
+
+</ul>
+</div>
+</div>
+
 
 
 <div class="box">
